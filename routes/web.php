@@ -1,7 +1,9 @@
 <?php
 
-use App\Models\Desktop;
-use App\Models\Processor;
+use App\Models\City;
+// use App\Models\Desktop;
+// use App\Models\Processor;
+use App\Models\Country;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +22,17 @@ use Illuminate\Support\Facades\Route;
 //     return $processor;
 // });
 
-Route::get('/desktop', function () {
-    $desktop= Processor::find(1)->desktop;
-    return $desktop;
+// Route::get('/desktop', function () {
+//     $desktop= Processor::find(1)->desktop;
+//     return $desktop;
+// });
+
+Route::get('/cities',function(){
+    $cities = Country::find(2)->cities;
+    return $cities;
+});
+
+Route::get('/country',function(){
+    $country = City::find(4)->country;
+    return $country;
 });
